@@ -2,7 +2,10 @@ $(document).ready(function(){
     $("#hover2").hover(function(){
         $(".setting-detail").css({"display":"block","right":"106px","top":"37px"});
      },function(){
-        $(".setting-detail").css("display","none");           
+         setTimeout(function(){
+            $(".setting-detail").css("display","none");  
+         },500)
+        // $(".setting-detail").css("display","none");           
      });
         $(".input").keydown(function(){ 
             $(".wrap").attr("class","change-wrap");
@@ -45,4 +48,15 @@ $(document).ready(function(){
         $("#u1").show();
         $("#u2").css({"display":"none"});
     });
+    $(".setting-detail").hover(function(){
+        $(".setting-detail").css("display","block")}
+    );
+    $(".detail-li").hover(
+        function(){
+            $(this).addClass("li-hover");
+        },function(){
+            $(this).removeClass("li-hover")
+        }
+    );
+    
 })
